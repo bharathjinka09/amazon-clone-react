@@ -1,6 +1,7 @@
 import React from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider'
+import { auth } from './firebase'
 
 function Product({ id, title, price, image, rating }){
 	const [{basket}, dispatch] = useStateValue();
