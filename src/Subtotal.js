@@ -15,14 +15,14 @@ function Subtotal(){
 			<CurrencyFormat
 
 				renderText={(value) => (
-					<>
+					<div>
 						<p>
 							Subtotal ({basket.length} items): <strong>{value}</strong>
 						</p>
 						<small className='subtotal__gift'>
 							<input type='checkbox' /> This order contains a gift
 						</small>
-					</>
+					</div>
 				)}
 				decimalScale={2}
 				value={getBasketTotal(basket)}
@@ -30,9 +30,15 @@ function Subtotal(){
 				thousandSeparator={true}
 				prefix={'₹ '}
 			/>
-			<button>Proceed to Checkout</button>			
+			<button onClick={checkoutMsg}>Proceed to Checkout</button>			
 		</div>
 	);
 }
+
+function checkoutMsg(){
+	alert('Your order is placed!')
+	window.location = '/'
+}
+
 
 export default Subtotal
