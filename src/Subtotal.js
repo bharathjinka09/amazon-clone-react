@@ -37,7 +37,7 @@ function Subtotal(){
 
 function checkoutMsg(){
 	alert('Your order is placed!')
-	window.location = '/'
+	window.location = '/amazon-clone-react'
 }
 
 
